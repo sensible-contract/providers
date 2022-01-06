@@ -1,22 +1,29 @@
-# web3-sensible
+# Sensible Web3 Providers
 
-This is a sub-package of [web3.js][repo].
+[![npm version](https://img.shields.io/npm/v/@sensible-contract/providers.svg)](https://www.npmjs.com/package/@sensible-contract/providers)
 
-Offering some methods to send sensible-contract transaction
+This is part of [sensible-web3][repo].
+
+It contains common Provider classes to support sensible-web3.
 
 Please read the [documentation][docs] for more.
 
 ## Installation
 
 ```bash
-npm install @sensible-contract/web3-sensible
+npm install @sensible-contract/providers
 ```
 
 ## Usage
 
 ```js
-const sensible = require("@sensible-contract/web3-sensible");
+const {
+  SensiblequeryProvider,
+  MetaSVProvider,
+  WhatsOnChainProvider
+} = require("@sensible-contract/providers");
+let provider = new SensiblequeryProvider();
 ```
 
-[docs]: http://bitcoinsv-web3js.readthedocs.io/en/1.0/
-[repo]: https://github.com/sensible-contract/web3.js
+[docs]: https://sensible-web3.readthedocs.io/en/latest/web3.html#providers
+[repo]: https://github.com/sensible-contract/sensible-web3
