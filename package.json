@@ -1,6 +1,6 @@
 {
   "name": "@sensible-contract/providers",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Providers for sensible-contracts",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

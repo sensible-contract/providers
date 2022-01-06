@@ -13,9 +13,16 @@ import { BaseProvider, NETWORK } from "./base-provider";
 
 export class SensiblequeryProvider extends BaseProvider {
   sensibleApi: SensibleApi;
-  constructor(network: NETWORK = "mainnet") {
+  constructor(network: NETWORK = "mainnet", apiPrefix?: string) {
     super(network, "sensiblequery");
-    this.sensibleApi = new SensibleApi();
+    if (!apiPrefix) {
+      if (network == "mainnet") {
+        apiPrefix = "https://api.sensiblequery.com";
+      } else {
+        apiPrefix = "https://api.sensiblequery.com/test";
+      }
+    }
+    this.sensibleApi = new SensibleApi(apiPrefix);
   }
 
   getUtxos(
